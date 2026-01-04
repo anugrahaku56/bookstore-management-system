@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><title>View Books</title></head>
+<body>
+
+<a href="/home">Home</a>
+
+<h2>Book List</h2>
+
+<form method="get">
+<input type="text" name="search" placeholder="Search by title">
+<button>Search</button>
+</form>
+
+<img src="/static/book2.jpg" width="300">
+
+<table border="1">
+<tr>
+<th>No</th><th>Title</th><th>Author</th>
+<th>Price</th><th>Quantity</th>
+<th>Edit</th><th>Delete</th>
+</tr>
+
+{% for b in books %}
+<tr>
+<td>{{ loop.index }}</td>
+<td>{{ b['title'] }}</td>
+<td>{{ b['author'] }}</td>
+<td>{{ b['price'] }}</td>
+<td>{{ b['quantity'] }}</td>
+<td><a href="/edit/{{ b['id'] }}">Edit</a></td>
+<td><a href="/delete/{{ b['id'] }}">Delete</a></td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

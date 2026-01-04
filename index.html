@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bookstore Management System</title>
+<style>
+body, html { margin:0; height:100%; font-family:Arial; }
+.hero {
+    height:100vh;
+    background:url('/static/book.jpg') center/cover;
+}
+.overlay {
+    background:rgba(0,0,0,0.6);
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+a {
+    padding:15px 30px; margin:10px;
+    background:#e67e22; color:white;
+    text-decoration:none; border-radius:8px;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<div class="overlay">
+<h1>Bookstore Management System</h1>
+<a href="/add">Add Book</a>
+<a href="/view">View Books</a>
+</div>
+</div>
+
+</body>
+</html>

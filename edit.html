@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Edit Book</title></head>
+<body>
+
+<a href="/home">Home</a>
+
+<h2>Edit Book</h2>
+
+<form method="post">
+<input type="text" name="title" value="{{ book['title'] }}" required><br>
+<input type="text" name="author" value="{{ book['author'] }}" required><br>
+<input type="text" name="price" value="{{ book['price'] }}" required><br>
+<input type="text" name="quantity" value="{{ book['quantity'] }}" required><br>
+<button>Update</button>
+</form>
+
+</body>
+</html>
